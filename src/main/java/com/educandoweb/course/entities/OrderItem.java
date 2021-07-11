@@ -10,8 +10,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "tb_order_item")
 public class OrderItem {
-	
-	//ID COMPOSTO
+
+	// ID COMPOSTO
 	@EmbeddedId
 	private OrderItemPK id = new OrderItemPK();
 
@@ -29,7 +29,7 @@ public class OrderItem {
 		this.quantity = quantity;
 		this.price = price;
 	}
-	
+
 	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();
